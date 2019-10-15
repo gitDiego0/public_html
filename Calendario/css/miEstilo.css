@@ -1,0 +1,62 @@
+
+#Cuerpo{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#Calendario {
+    border: 15px;
+    color: black;
+}
+
+.table,td{
+    border: 2px solid black;
+    width: 12.2%;
+    height: 12px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.th{
+    border: 0px;
+    text-align:center;
+}
+
+#Festivo{
+    color: red;
+}
+#Festivo:hover{
+    background-color: red;
+    color: white;
+}
+
+#hoy{
+    color: white;
+    font-weight: bold;
+    background-color: navy;
+}
+
+#normalDay{
+    color: black;
+}
+
+#normalDay:hover{
+    background-color: grey;
+}
+
+#Domingo{
+    color: red;
+    background-color: darkgoldenrod;
+}
+
+#dias{
+    background-color: darkgoldenrod;
+}
+
+#Mes{
+    background-color: aqua;
+}
+
+#Anio{
+    background-color: aqua;
+}
