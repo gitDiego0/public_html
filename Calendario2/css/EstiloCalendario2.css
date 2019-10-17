@@ -2,11 +2,12 @@
 * Hoja de estilos
 **/
 
-.contenedorExterno
+.Calendario
 {
 	font-family: "Lucida Console", Monaco, monospace;
 	font-style: normal;
-	font-size: 1em;
+	font-size: 19px;
+	display: block;
 }
 .contenedor
 {
@@ -46,14 +47,60 @@
 
 .ctrDesp
 {
+	vertical-align: middle;
 	width:10%;
 }
-.hoy{}
-.diaSemana{}
-.numSemanas{}
-.domingo, .diaFestivo{}
+
+.ctrlDesp,.ctrlSelc
+{
+	
+	text-decoration: none;
+	border-radius: 5px;
+	text-align: center;
+	
+
+}
+
+.ctrlDesp:hover,.ctrlSelc:hover
+{
+	cursor: pointer;
+	background-color: black;
+}
+
+.hoy
+{
+	font-weight: bold;
+	background-color: darkgray;
+}
+
+.vacio, .diaSemana, .numSemanas
+{
+	color: red;
+	background-color: aquamarine;
+}
+
+.hoy,.diaEspecial,.diaNoLaborable,.diaNormal,.diaOtroMes.domingo, .diaFestivo
+{
+	text-align: center;
+}
+.hoy:hover,.diaEspecial:hover,.diaNoLaborable:hover,.diaNormal:hover,.diaOtroMes:hover,.domingo:hover, .diaFestivo:hover
+{
+	text-shadow: 2px 2px 5px darkmagenta;
+}
+
+.domingo,.diaFestivo
+{
+	color: red;
+}
 .numSemana{}
-.diaEspecial, .diaNoLaborable{}
+.diaEspecial, .diaNoLaborable
+{
+	color: blue;
+	font-weight: bold;
+}
 .diaNormal{}
-.diaOtroMes{}
-.vacio{}
+.diaOtroMes
+{
+	color: dimgray;
+}
+

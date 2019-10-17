@@ -6,31 +6,55 @@
         
     </head>
     <body>
-        <div class="contenedorExterno">
+        <div class="Calendario">
                 <div id="Calendario" class="contenedor">
                         0000000000111111111122222222223
                 </div>
         </div>
 
-var recorte = {tag:"div",id:null,class:"botonera",title: null, 
+        <!--Clase modal -->
+
+        <div id="modal">
+            <div id="ContenidoModal">
+                <spam class="close">&times;</spam>
+                    <input type="radio" name="monthSelector" value="0">Enero<br>
+                    <input type="radio" name="monthSelector" value="1">Febrero<br>
+                    <input type="radio" name="monthSelector" value="2">Marzo<br>
+                    <input type="radio" name="monthSelector" value="3">Abril<br>
+                    <input type="radio" name="monthSelector" value="4">Mayo<br>
+                    <input type="radio" name="monthSelector" value="5">Junio<br>
+                    <input type="radio" name="monthSelector" value="6">Julio<br>
+                    <input type="radio" name="monthSelector" value="7">Agosto<br>
+                    <input type="radio" name="monthSelector" value="8">Septiembre<br>
+                    <input type="radio" name="monthSelector" value="9">Octubre<br>
+                    <input type="radio" name="monthSelector" value="10">Noviembre<br>
+                    <input type="radio" name="monthSelector" value="11">Diciembre<br>
+
+                    <input type="button" id="btnCancel" onclick="function() {};" class="btnSelect" value="Cancelar">
+                    <input type="button" id="btnOk" onclick="function() {};" class="btnOk" value="Confirmar     ">
+
+            </div>
+        </div>
+        
+    </body>
+
+    var recorte = {tag:"div",id:null,class:"botonera",title: null, 
                 content: [ {tag:"div",id:"controls",class:"filas controles",
                     title: null, content: [
                         {tag:"div",id:"prevYear",class:"celdas ctrlDesp",
-                            title: "Ir a 2018", content: "&laquo;"}
+                            title: "Ir a 2018", content: "&laquo;"},
                         {tag:"div",id:"prevMont",class:"celdas ctrlDesp",
-                            title: "Ir a 2018", content: "&larr;"}
+                            title: "Ir a 2018", content: "&larr;"},
                         {tag:"div",id:"CalendarYear",class:"celdas ctrlSelc",
-                            title: "Ir a 2018", content: "2019"}
+                            title: "Ir a 2018", content: "2019"},
                         {tag:"div",id:"goToday",class:"celdas ctrlDesp,
-                            title: "Ir a 2018", content: "&loz;"}
+                            title: "Ir a 2018", content: "&loz;"},
                         {tag:"div",id:"CalendarMont",class:"celdas ctrlSelc",
-                            title: "Ir a 2018", content: "oct"}
+                            title: "Ir a 2018", content: "oct"},
                         {tag:"div",id:"nextMont",class:"celdas ctrlDesp",
-                            title: "IR a 2018", content: "&rarr;"}
+                            title: "IR a 2018", content: "&rarr;"},
                         {tag:"div",id:"nextYear",class:"celdas ctrlDesp",
                             title: "Ir a 2018", content: null}
                     ]}
             ]}
-        
-    </body>
 </html>
