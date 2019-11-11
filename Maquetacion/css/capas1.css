@@ -119,3 +119,12 @@ span {
     color: white;
     font-size: 15px;
 }
+
+.center-text {
+    text-align: center;
+}
+
+#cabeceraCuerpo {
+    margin-top: 2em;
+    background-color: #f2f2f2;
+}
