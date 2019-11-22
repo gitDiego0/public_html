@@ -79,6 +79,8 @@ nav {
 
 body {
     margin: 0;
+    resize: horizontal;
+    overflow: auto;
 }
 
 .itemFooter {}
@@ -124,7 +126,13 @@ span {
     text-align: center;
 }
 
-#cabeceraCuerpo {
+.marginBody {
+    border: 0px 0px 1px 1px;
+    margin: 0px 10px 15px 10px;
+}
+
+.cabeceraCuerpo {
     margin-top: 2em;
     background-color: #f2f2f2;
+    width: 100%;
 }
