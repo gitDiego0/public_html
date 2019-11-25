@@ -1,0 +1,182 @@
+//Creo la variable fecha para poder tener la fehca actual y trabajar a partir de un dia.
+
+var fecha=new Date();
+//fecha.setHours(0,0,0,0);
+var dia=0;
+var dias=['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
+//var body=document.getElementById("Cuerpo");
+//var tabla=document.getElementById("Calendario");
+//var tblbody=document.createElement("tbody");
+
+function init(){
+    pintarDias();
+    //pintar();
+}
+
+function pintar(){
+    document.getElementById("Cuerpo").innerText= "hola";
+    document.getElementById("Cuerpo").innerText= ultimoDiaMes;
+}
+
+function pintarMes()
+{
+
+}
+
+function pintarTabla2(anio,mes)
+{
+    var verPrimerDia=new Date(anio,mes,1);
+    var verUltimoDia=new Date(anio,mes,0);
+    var primerDia=(verPrimerDia.getDay()==0)?7:verPrimerDia.getDay();
+    var ultimoDia=verUltimoDia.getDate();
+
+    var ulitmoCuadro=primerDia+ultimoDia;
+
+
+    var body=document.getElementById("Cuerpo");
+    var tabla=document.getElementById("Calendario");
+    var tblbody=document.createElement("tbody");
+    var fila=document.createElement("tr");
+    for(var i=1;i<43;i++)
+    {
+        //var fila=document.createElement("tr");
+        //tblbody.appendChild(fila);
+
+        if(i==primerDia)
+
+		{
+
+			// determinamos en que dia empieza
+
+			dia=1;
+
+		}
+
+		if(i<primerDia || i>=ulitmoCuadro)
+
+		{
+
+			// celda vacia
+
+            //resultado+="<td>&nbsp;</td>";
+            
+            var celda=document.createElement("td");
+            celda.innerHTML="&nbsp;";
+            //celda.appendChild(texto);
+            fila.appendChild(celda);
+            
+
+		}else{
+
+			// mostramos el dia
+
+			if(dia==fecha.getDate() && mes==fecha.getMonth() && anio==fecha.getFullYear()){
+
+                //resultado+="<td class='hoy'>"+dia+"</td>";
+                
+                var celda=document.createElement("td");
+                celda.setAttribute("id","hoy");
+                var texto=document.createTextNode(dia);
+                celda.appendChild(texto);
+                fila.appendChild(celda);
+                
+
+            }else{
+
+                //resultado+="<td>"+dia+"</td>";
+                var celda=document.createElement("td");
+                var texto=document.createTextNode(dia);
+                celda.appendChild(texto);
+                fila.appendChild(celda);
+                
+            }
+			dia++;
+
+		}
+
+		if(i%7==0)
+
+		{
+
+			if(dia>ultimoDia)
+
+				break;
+
+                var fila=document.createElement("tr");
+                tblbody.appendChild(fila);
+
+        }
+        tblbody.appendChild(fila);
+    }
+    tabla.appendChild(tblbody);
+}
+
+function pintarTabla()
+{
+    var anio=fecha.getFullYear();
+    var mes=fecha.getMonth();
+    var ultimoDia=ultimoDiaMes(anio,mes);
+    var body=document.getElementById("Cuerpo");
+    var tabla=document.getElementById("Calendario");
+    var tblbody=document.createElement("tbody");
+    for(var i=1;i<6;i++)
+    {
+        var fila=document.createElement("tr");
+        for (var j=hoy;j<ultimoDia;j++)
+        {
+            if(dias[j]=="Dom")
+            {
+                var celda=document.createElement("td");
+                celda.setAttribute("id","Festivo");
+                var texto=document.createTextNode(j);
+            }else{
+            var celda=document.createElement("td");
+            celda.setAttribute("id","NoFestivo");
+            var texto=document.createTextNode(j);
+            }
+            celda.appendChild(texto);
+            fila.appendChild(celda);
+        }
+
+        tblbody.appendChild(fila);
+    }
+
+    tabla.appendChild(tblbody);
+}
+
+function pintarDias(){
+    var tabla=document.getElementById("Calendario");
+    var tblbody=document.createElement("tbody");
+    var fila=document.createElement("tr");
+    for(i=0;i<dias.length;i++)
+    {
+        var celda=document.createElement("td");
+        var texto=document.createTextNode(dias[i]);
+        celda.appendChild(texto);
+        fila.appendChild(celda);
+    }
+    tblbody.appendChild(fila);
+    tabla.appendChild(tblbody);
+    pintarTabla2(2019,9);
+}
+
+function mesSiguiente(){
+
+}
+
+function ultimoDiaMes(anio1,mes1)
+{
+    var lastDate=new Date(anio1,mes1,0);
+    lastDay=lastDate.getDate();
+    return lastDay;
+}
+
+
+
+
+
+
+
+
+
+

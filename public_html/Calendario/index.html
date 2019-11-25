@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/miEstilo.css" >
+        <script src="js/miCalendario.js"></script>
+    </head>
+    <body id="Cuerpo" onload="init()">
+        <div style="float: left">
+            <p id="Mes"></p>
+        </div>
+        <div style="float: left">
+            <p id="Anio"></p>
+        </div>
+        <br><br><br>
+        <div style="float:none">
+            <table id="Calendario">
+            </table>
+        </div>
+        
+        <br><br>
+        <div id="CajaFechaSeleccionada" sytle="float:left">
+            <p id="fechaSeleccionada"></p>
+        </div>
+        <br><br>
+        <div id="botones" style="float: left">
+            <button type="button" id="MesMenos" onclick="mesMenos()">&laquo</button>
+            Mes
+            <button type="button" id="MesMas" onclick="mesMas()">&raquo</button>
+            <button type="button" id="AnioMenos" onclick="anioMenos()">&laquo</button>
+            Año
+            <button type="button" id="AnioMas" onclick="anioMas()">&raquo</button>
+            <br><br>
+            <button type="button" id="fechaActual" onclick="FechaActual()">Ir a fecha actual</button>
+        </div>
+        
+    </body>
+</html>

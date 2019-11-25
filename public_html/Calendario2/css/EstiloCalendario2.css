@@ -1,0 +1,106 @@
+/**
+* Hoja de estilos
+**/
+
+.Calendario
+{
+	font-family: "Lucida Console", Monaco, monospace;
+	font-style: normal;
+	font-size: 19px;
+	display: block;
+}
+.contenedor
+{
+/* *
+ * tamaño(margenes,bordes y espaciado);
+ * display: table;
+ * fuente;
+ * color de fondo;
+ * estilo de borde
+ * */
+ 
+	display: table;
+	max-width:31ch;/*Ancho establecido por ancho del numero 0*/
+	min-width:27ch;
+	padding: .5ex;/*Coge como referencia la altura de la x minuscula*/
+	border: 1px;
+	border-style: solid;
+	border-color: black;
+	margin: 1px;
+	background-color: darkgray;
+	
+}
+.filas{}
+.celdas{}
+.controles,  .ctrlDesp, .ctrlSelc
+{
+	text-align: center;
+
+}
+
+
+
+.ctrlSelc
+{
+	width: 25%;
+}
+
+.ctrDesp
+{
+	vertical-align: middle;
+	width:10%;
+}
+
+.ctrlDesp,.ctrlSelc
+{
+	
+	text-decoration: none;
+	border-radius: 5px;
+	text-align: center;
+	
+
+}
+
+.ctrlDesp:hover,.ctrlSelc:hover
+{
+	cursor: pointer;
+	background-color: black;
+}
+
+.hoy
+{
+	font-weight: bold;
+	background-color: darkgray;
+}
+
+.vacio, .diaSemana, .numSemanas
+{
+	color: red;
+	background-color: aquamarine;
+}
+
+.hoy,.diaEspecial,.diaNoLaborable,.diaNormal,.diaOtroMes.domingo, .diaFestivo
+{
+	text-align: center;
+}
+.hoy:hover,.diaEspecial:hover,.diaNoLaborable:hover,.diaNormal:hover,.diaOtroMes:hover,.domingo:hover, .diaFestivo:hover
+{
+	text-shadow: 2px 2px 5px darkmagenta;
+}
+
+.domingo,.diaFestivo
+{
+	color: red;
+}
+.numSemana{}
+.diaEspecial, .diaNoLaborable
+{
+	color: blue;
+	font-weight: bold;
+}
+.diaNormal{}
+.diaOtroMes
+{
+	color: dimgray;
+}
+
