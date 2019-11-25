@@ -80,10 +80,8 @@ nav {
 body {
     margin: 0;
     resize: horizontal;
-    overflow: auto;
+    background-color: #f2f2f2;
 }
-
-.itemFooter {}
 
 footer {
     position: fixed;
@@ -135,4 +133,35 @@ span {
     margin-top: 2em;
     background-color: #f2f2f2;
     width: 100%;
+}
+
+.card {
+    width: 75%;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;
+}
+
+.newsHeader {
+    font-style: oblique;
+    font-size: 15px;
+    color: white;
+    background-color: red;
+    height: 3em;
+    text-align: center;
+}
+
+.newsBody {}
+
+.newsFooter {
+    color: white;
+    background-color: red;
+    text-align: left;
+}
+
+.contenidoNoticias {
+    margin: 5px;
+}
+
+.empresasColaboradoras {
+    padding-bottom: 7em;
 }
